@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bewerbungsformular | DonutWave</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #fff7e6; font-family: 'Poppins', Arial, sans-serif; }
+    .container { max-width: 500px; margin: 60px auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 16px #ffb6b955; padding: 32px 24px; }
+    h1 { color: #ff6f91; margin-bottom: 18px; }
+    label { font-weight: bold; color: #7c3f00; }
+    input, textarea { width: 100%; margin-bottom: 18px; padding: 10px; border-radius: 8px; border: 1px solid #ffb6b9; }
+    .seiten-btn { background: #ffb6b9; color: #fff; border: none; padding: 12px 32px; border-radius: 30px; font-weight: bold; cursor: pointer; }
+    .seiten-btn:hover { background: #ff6f91; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Bewerbungsformular</h1>
+    <form action="https://formspree.io/f/xzzgewbw" method="POST">
+      <label for="name">Name & Discord-Name:</label>
+      <input type="text" id="name" name="Name und Discord-Name" required />
+
+      <label for="age">Alter:</label>
+      <input type="number" id="age" name="Alter" required />
+
+      <label for="role">Rolle (Helper, Mod, Admin...):</label>
+      <input type="text" id="role" name="Rolle" required />
+
+      <label for="motivation">Warum möchtest du ins Team?</label>
+      <textarea id="motivation" name="Motivation" rows="3" required></textarea>
+
+      <label for="special">Was macht dich besonders?</label>
+      <textarea id="special" name="Besonderheit" rows="2"></textarea>
+
+      <button type="submit" class="seiten-btn">Bewerbung absenden</button>
+    </form>
+    <div style="margin-top:18px;">
+      <a href="seite3.html" class="seiten-btn">⬅️ Zurück</a>
+    </div>
+  </div>
+</body>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Partnerschaftsanfrage | DonutWave</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { background: #fff7e6; font-family: 'Poppins', Arial, sans-serif; }
+    .container { max-width: 500px; margin: 60px auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 16px #ffb6b955; padding: 32px 24px; }
+    h1 { color: #ff6f91; margin-bottom: 18px; }
+    label { font-weight: bold; color: #7c3f00; }
+    input, textarea { width: 100%; margin-bottom: 18px; padding: 10px; border-radius: 8px; border: 1px solid #ffb6b9; }
+    .seiten-btn { background: #ffb6b9; color: #fff; border: none; padding: 12px 32px; border-radius: 30px; font-weight: bold; cursor: pointer; }
+    .seiten-btn:hover { background: #ff6f91; }
+  </style>
+</head>
+<body>
+  <
+  <div class="container">
+    <h1>Partnerschaftsanfrage</h1>
+    <form action="https://formspree.io/f/xzzgewbw" method="POST">
+      <label for="projekt">Projekt/Server Name:</label>
+      <input type="text" id="projekt" name="Projekt/Server Name" required />
+
+      <label for="vorstellung">Kurze Vorstellung:</label>
+      <textarea id="vorstellung" name="Vorstellung" rows="2" required></textarea>
+
+      <label for="grund">Warum passt eine Partnerschaft zu uns?</label>
+      <textarea id="grund" name="Partnerschaft Grund" rows="2" required></textarea>
+
+      <label for="ziel">Was können wir gemeinsam erreichen?</label>
+      <textarea id="ziel" name="Gemeinsames Ziel" rows="2"></textarea>
+
+      <label for="kontakt">Dein Discord-Name oder Kontakt:</label>
+      <input type="text" id="kontakt" name="Kontakt" required />
+
+      <button type="submit" class="seiten-btn">Partnerschaft anfragen</button>
+    </form>
+    <div style="margin-top:18px;">
+      <a href="seite3.html" class="seiten-btn">⬅️ Zurück</a>
+    </div>
+  </div>
+</body>
+</html>

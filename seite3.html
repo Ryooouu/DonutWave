@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bewerbungen, Entbannung & Partnerschaft | DonutWave</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(120deg, #f6d365 0%, #ffb6b9 60%, #ff6f91 100%);
+      min-height: 100vh;
+      font-family: 'Poppins', Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    .container {
+      background: rgba(255,255,255,0.97);
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(255, 111, 145, 0.18);
+      max-width: 750px;
+      margin: 80px auto 40px auto;
+      padding: 48px 36px 36px 36px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .headline {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.5rem;
+      color: #ff6f91;
+      margin-bottom: 18px;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 16px #ffb6b9aa;
+    }
+    .desc {
+      color: #7c3f00;
+      font-size: 1.18rem;
+      margin-bottom: 32px;
+    }
+    .action-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      margin-bottom: 36px;
+    }
+    .action-btn {
+      flex: 1 1 220px;
+      min-width: 180px;
+      max-width: 260px;
+      padding: 22px 18px;
+      border-radius: 22px;
+      background: linear-gradient(90deg, #ffb6b9 0%, #ff6f91 100%);
+      color: #fff;
+      font-size: 1.18rem;
+      font-weight: bold;
+      border: none;
+      box-shadow: 0 4px 16px #ffb6b955;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      letter-spacing: 1px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      justify-content: center;
+    }
+    .action-btn:hover {
+      background: linear-gradient(90deg, #ff6f91 0%, #ffb6b9 100%);
+      color: #fff;
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 8px 32px #ff6f9177;
+    }
+    .section {
+      background: #fff7e6;
+      border-radius: 16px;
+      box-shadow: 0 2px 8px #fda08522;
+      padding: 28px 24px 18px 24px;
+      margin-bottom: 28px;
+      text-align: left;
+      color: #7c3f00;
+      font-size: 1.13rem;
+      display: none;
+      animation: fadein 0.5s;
+    }
+    .section.active {
+      display: block;
+    }
+    .section h2 {
+      color: #ffb6b9;
+      font-size: 1.35rem;
+      margin-top: 0;
+      margin-bottom: 12px;
+    }
+    @keyframes fadein {
+      from { opacity: 0; transform: translateY(20px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .seiten-nav {
+      margin: 40px auto 20px auto;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+    .seiten-btn {
+      padding: 12px 36px;
+      border-radius: 30px;
+      background: #ffb6b9;
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: bold;
+      text-decoration: none;
+      border: none;
+      box-shadow: 0 4px 16px #ffb6b955;
+      transition: background 0.2s, transform 0.2s;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+    .seiten-btn:hover {
+      background: #ff6f91;
+      color: #fff;
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 8px 32px #ff6f9177;
+    }
+  </style>
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(sec => sec.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    window.onload = function() {
+      showSection('bewerbung');
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1 class="headline">Bewerbungen, Entbannung & Partnerschaft</h1>
+    <div class="desc">
+      Hier kannst du dich für unser Team bewerben, einen Entbannungsantrag stellen oder eine Partnerschaft mit DonutWave anfragen. Wähle einfach das passende Thema!
+    </div>
+    <div class="action-btns">
+      <button class="action-btn" onclick="showSection('bewerbung')">📝 Bewerbung</button>
+      <button class="action-btn" onclick="showSection('entbannung')">🔓 Entbannungsantrag</button>
+      <button class="action-btn" onclick="showSection('partnerschaft')">🤝 Partnerschaft</button>
+    </div>
+    <div id="bewerbung" class="section">
+      <h2>📝 Bewerbung als Teammitglied</h2>
+      <p>
+        Du möchtest Teil unseres Teams werden? Wir suchen immer motivierte und freundliche Leute als Helper, Moderator oder Admin!<br><br>
+        <b>So bewirbst du dich:</b>
+        <ul>
+          <li>Stell dich kurz vor (Name, Alter, Erfahrung)</li>
+          <li>Erzähl, warum du ins Team möchtest und was dich motiviert</li>
+          <li>Welche Rolle interessiert dich? (Helper, Mod, Admin...)</li>
+          <li>Was macht dich besonders?</li>
+        </ul>
+        <b>Schicke deine Bewerbung direkt im Discord im Channel <code>#bewerbung</code> oder per DM an das Team!</b>
+      </p>
+    </div>
+    <div id="entbannung" class="section">
+      <h2>🔓 Entbannungsantrag</h2>
+      <p>
+        Du bist gebannt worden und möchtest wieder auf DonutWave spielen?<br><br>
+        <b>So stellst du einen Entbannungsantrag:</b>
+        <ul>
+          <li>Dein Ingame-Name und Discord-Name</li>
+          <li>Wann wurdest du gebannt?</li>
+          <li>Warum wurdest du gebannt?</li>
+          <li>Warum sollten wir dich entbannen?</li>
+        </ul>
+        <b>Schreibe deinen Antrag im Discord im Channel <code>#entbannung</code> oder sende ihn an einen Admin!</b>
+      </p>
+    </div>
+    <div id="partnerschaft" class="section">
+      <h2>🤝 Partnerschaftsanfrage</h2>
+      <p>
+        Du hast einen eigenen Server, Discord oder ein cooles Projekt und möchtest mit DonutWave zusammenarbeiten?<br><br>
+        <b>So bewirbst du dich für eine Partnerschaft:</b>
+        <ul>
+          <li>Stelle dein Projekt/Server kurz vor</li>
+          <li>Warum passt eine Partnerschaft zu uns?</li>
+          <li>Was können wir gemeinsam erreichen?</li>
+        </ul>
+        <b>Schreibe deine Anfrage im Discord im Channel <code>#partnerschaften</code> oder kontaktiere das Team direkt!</b>
+      </p>
+    </div>
+    <div class="seiten-nav">
+      <a href="Server.html" class="seiten-btn">⬅️ Zurück zum Server</a>
+      <a href="index.html" class="seiten-btn">Zurück zur Startseite</a>
+    </div>
+  </div>
+</body>
+</html>
+<!-- ...existing code... -->
+    <div id="bewerbung" class="section">
+      <h2>📝 Bewerbung als Teammitglied</h2>
+      <p>
+        Du möchtest Teil unseres Teams werden? Wir suchen immer motivierte und freundliche Leute als Helper, Moderator oder Admin!<br><br>
+        <b>So bewirbst du dich:</b>
+        <ul>
+          <li>Stell dich kurz vor (Name, Alter, Erfahrung)</li>
+          <li>Erzähl, warum du ins Team möchtest und was dich motiviert</li>
+          <li>Welche Rolle interessiert dich? (Helper, Mod, Admin...)</li>
+          <li>Was macht dich besonders?</li>
+        </ul>
+        <b>Schicke deine Bewerbung direkt im Discord im Channel <code>#bewerbung</code> oder per DM an das Team!</b>
+      </p>
+      <div style="text-align:center; margin-top:18px;">
+        <a href="https://discord.com/channels/@me" target="_blank" class="action-btn" style="display:inline-block; font-size:1.1rem;">🚀 Hier bewerben</a>
+      </div>
+    </div>
+    <div id="entbannung" class="section">
+      <h2>🔓 Entbannungsantrag</h2>
+      <p>
+        Du bist gebannt worden und möchtest wieder auf DonutWave spielen?<br><br>
+        <b>So stellst du einen Entbannungsantrag:</b>
+        <ul>
+          <li>Dein Ingame-Name und Discord-Name</li>
+          <li>Wann wurdest du gebannt?</li>
+          <li>Warum wurdest du gebannt?</li>
+          <li>Warum sollten wir dich entbannen?</li>
+        </ul>
+        <b>Schreibe deinen Antrag im Discord im Channel <code>#entbannung</code> oder sende ihn an einen Admin!</b>
+      </p>
+      <div style="text-align:center; margin-top:18px;">
+        <a href="https://discord.com/channels/@me" target="_blank" class="action-btn" style="display:inline-block; font-size:1.1rem;">🔓 Hier Entbannungsantrag stellen</a>
+      </div>
+    </div>
+    <div id="partnerschaft" class="section">
+      <h2>🤝 Partnerschaftsanfrage</h2>
+      <p>
+        Du hast einen eigenen Server, Discord oder ein cooles Projekt und möchtest mit DonutWave zusammenarbeiten?<br><br>
+        <b>So bewirbst du dich für eine Partnerschaft:</b>
+        <ul>
+          <li>Stelle dein Projekt/Server kurz vor</li>
+          <li>Warum passt eine Partnerschaft zu uns?</li>
+          <li>Was können wir gemeinsam erreichen?</li>
+        </ul>
+        <b>Schreibe deine Anfrage im Discord im Channel <code>#partnerschaften</code> oder kontaktiere das Team direkt!</b>
+      </p>
+      <div style="text-align:center; margin-top:18px;">
+        <a href="https://discord.com/channels/@me" target="_blank" class="action-btn" style="display:inline-block; font-size:1.1rem;">🤝 Hier Partnerschaft anfragen</a>
+      </div>
+    </div>
+<!-- ...im Bereich Bewerbung... -->
+<div style="text-align:center; margin-top:18px;">
+  <a href="Bewerbungsantrag.html" class="action-btn" style="display:inline-block; font-size:1.1rem;">🚀 Hier bewerben</a>
+</div>
+<!-- ...im Bereich Entbannung... -->
+<div style="text-align:center; margin-top:18px;">
+  <a href="entbannungsantrag.html" class="action-btn" style="display:inline-block; font-size:1.1rem;">🔓 Hier Entbannungsantrag stellen</a>
+</div>
+<!-- ...im Bereich Partnerschaft... -->
+<div style="text-align:center; margin-top:18px;">
+  <a href="patnerschaftantrag.html" class="action-btn" style="display:inline-block; font-size:1.1rem;">🤝 Hier Partnerschaft anfragen</a>
+</div>
