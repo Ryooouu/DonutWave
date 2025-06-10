@@ -108,16 +108,36 @@
     <div class="seiten-nav">
       <a href="index.html" class="seiten-btn active">Seite 1</a>
       <a href="seite2.html" class="seiten-btn">Seite 2</a>
-    </div>
-  </div>
-</body>
-</html>
-<!-- ...existing code... -->
-    <div class="seiten-nav">
-      <a href="index.html" class="seiten-btn">⬅️ Zurück zur Startseite</a>
-      <a href="Team.html" class="seiten-btn">Weiter: Unser Team ➡️</a>
       <a href="seite3.html" class="seiten-btn">Seite 3</a>
     </div>
+
   </div>
 </body>
 </html>
+<div class="seiten-nav">
+  <a href="index.html" class="seiten-btn seiten-btn-back">⬅️ Zurück zur Startseite</a>
+  <a href="Team.html" class="seiten-btn seiten-btn-next">Weiter: Unser Team ➡️</a>
+</div>
+<style>
+  .seiten-btn-back {
+    background: linear-gradient(90deg, #ffe7a3 0%, #ffb86b 100%);
+    color: #7c3f00;
+    border: 2px solid #ffb86b;
+  }
+  .seiten-btn-back:hover {
+    background: linear-gradient(90deg, #ffb86b 0%, #ffe7a3 100%);
+    color: #fff;
+    border-color: #ffb86b;
+  }
+  .seiten-btn-next {
+    background: linear-gradient(90deg, #ffb6b9 0%, #ff6f91 100%);
+    color: #fff;
+    border: 2px solid #ff6f91;
+  }
+  .seiten-btn-next:hover {
+    background: linear-gradient(90deg, #ff6f91 0%, #ffb6b9 100%);
+    color: #fff;
+    border-color: #ff6f91;
+  }
+</style>
+  
