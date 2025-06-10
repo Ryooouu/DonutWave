@@ -3,14 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meine erste Website</title>
+  <title>DonutWave</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: radial-gradient(circle at 70% 30%, #ffe7a3 0%, #ffb6b9 60%, #ff6f91 100%);
+      min-height: 100vh;
+      font-family: 'Poppins', Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    .container {
+      background: rgba(255,255,255,0.96);
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(255, 111, 145, 0.18);
+      max-width: 480px;
+      margin: 80px auto 40px auto;
+      padding: 44px 32px 32px 32px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .main-title {
+      font-size: 2.2rem;
+      color: #ff6f91;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+      text-shadow: 0 2px 8px #fff3;
+    }
+    .main-desc {
+      font-size: 1.15rem;
+      color: #7c3f00;
+      margin-bottom: 30px;
+    }
+    .nav-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 30px;
+      align-items: center;
+    }
+    .nav-btn {
+      padding: 16px 38px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #ffb6b9 0%, #ff6f91 100%);
+      color: #fff;
+      font-size: 1.18rem;
+      font-weight: bold;
+      border: none;
+      box-shadow: 0 4px 16px #ffb6b955;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+    .nav-btn:hover {
+      background: linear-gradient(90deg, #ff6f91 0%, #ffb6b9 100%);
+      color: #fff;
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 8px 32px #ff6f9177;
+    }
+    .seiten-nav {
+      margin: 40px auto 20px auto;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+    .seiten-btn {
+      padding: 12px 36px;
+      border-radius: 30px;
+      background: #ffb6b9;
+      color: #fff;
+      font-size: 1.15rem;
+      font-weight: bold;
+      text-decoration: none;
+      border: none;
+      box-shadow: 0 4px 16px #ffb6b955;
+      transition: background 0.2s, transform 0.2s;
+      letter-spacing: 1px;
+      cursor: pointer;
+    }
+    .seiten-btn:hover {
+      background: #ff6f91;
+      color: #fff;
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 8px 32px #ff6f9177;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hallo ich bin imraan</h1>
-  <p>Das ist meine erste Website die ich erstelle.</p>
-</body>
- 
-  <a href="https://www.google.de" class="button">Zu Google</a>
+  <div class="container">
+    <h1 class="main-title">🍩 DonutWave</h1>
+    <p class="main-desc">
+      Willkommen auf DonutWave! Entdecke unsere Besonderheiten, erfahre mehr über unseren Discord und lerne unser Team kennen.
+    </p>
+    <div class="nav-btns">
+      <a href="Besonderheiten.html" class="nav-btn">Besonderheiten</a>
+      <a href="Server.html" class="nav-btn">Über unseren Discord</a>
+      <a href="Team.html" class="nav-btn">Unser Team</a>
+    </div>
+  <!-- ...existing code... -->
+    <div class="seiten-nav">
+      <a href="index.html" class="seiten-btn active">Seite 1</a>
+      <a href="seite2.html" class="seiten-btn">Seite 2</a>
+    </div>
+  </div>
 </body>
 </html>

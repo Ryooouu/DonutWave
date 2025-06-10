@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DonutWave Community</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: radial-gradient(circle at 70% 30%, #ffe7a3 0%, #ffb6b9 60%, #ff6f91 100%);
+      min-height: 100vh;
+      font-family: 'Poppins', Arial, sans-serif;
+      overflow-x: hidden;
+    }
+    .container {
+      background: rgba(255,255,255,0.97);
+      border-radius: 32px;
+      box-shadow: 0 8px 32px rgba(255, 111, 145, 0.18);
+      max-width: 650px;
+      margin: 80px auto 40px auto;
+      padding: 48px 36px 36px 36px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .donutwave-logo {
+      width: 240px;
+      margin-bottom: 18px;
+      filter: drop-shadow(0 4px 16px #ffb6b9aa);
+      border-radius: 24px;
+      background: #fff;
+      padding: 8px;
+      animation: float 2.5s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0);}
+      50% { transform: translateY(-14px);}
+    }
+    .community-banner {
+      background: linear-gradient(90deg, #ffb6b9 0%, #f6d365 100%);
+      color: #fff;
+      font-size: 1.18rem;
+      font-weight: bold;
+      border-radius: 18px;
+      padding: 13px 22px;
+      margin-bottom: 30px;
+      box-shadow: 0 2px 12px #ffb6b955;
+      letter-spacing: 1px;
+      display: inline-block;
+      animation: popin 1s;
+    }
+    @keyframes popin {
+      0% { transform: scale(0.7); opacity: 0;}
+      100% { transform: scale(1); opacity: 1;}
+    }
+    .eigenschaften-list {
+      text-align: left;
+      color: #7c3f00;
+      font-size: 1.13rem;
+      margin: 0 auto 24px auto;
+      max-width: 420px;
+      padding-left: 0;
+      list-style: none;
+    }
+    .eigenschaften-list li {
+      margin-bottom: 14px;
+      background: #fff7e6;
+      border-radius: 12px;
+      padding: 10px 16px;
+      box-shadow: 0 2px 8px #fda08522;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.08rem;
+    }
+    .community-zitat {
+      background: #fff7e6;
+      border-left: 6px solid #ffb6b9;
+      border-radius: 14px;
+      margin: 28px auto 18px auto;
+      padding: 18px 22px 10px 22px;
+      max-width: 400px;
+      font-style: italic;
+      color: #7c3f00;
+      box-shadow: 0 2px 8px #fda08522;
+    }
+    .community-zitat-user {
+      font-style: normal;
+      font-weight: bold;
+      margin-top: 8px;
+      color: #ff6f91;
+      text-align: right;
+    }
+    .spiele-section {
+      margin: 32px 0 18px 0;
+    }
+    .spiele-icons img {
+      width: 44px;
+      margin: 0 10px;
+      vertical-align: middle;
+      transition: transform 0.2s;
+    }
+    .spiele-icons img:hover {
+      transform: scale(1.2) rotate(-8deg);
+    }
+    .community-galerie {
+      margin: 32px 0 18px 0;
+    }
+    .galerie-img {
+      width: 46%;
+      border-radius: 14px;
+      margin: 6px 2%;
+      box-shadow: 0 2px 8px #fda08522;
+      transition: transform 0.2s;
+      background: #fff;
+      padding: 6px;
+    }
+    .galerie-img:hover {
+      transform: scale(1.05);
+    }
+    .discord-btn {
+      margin-top: 18px;
+      font-size: 1.13rem;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 #ffb6b955; }
+      70% { box-shadow: 0 0 0 12px #ffb6b900; }
+      100% { box-shadow: 0 0 0 0 #ffb6b955; }
+    }
+    .seiten-nav {
+      margin: 40px auto 20px auto;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+    .seiten-btn {
+      padding: 10px 28px;
+      border-radius: 22px;
+      background: #ffb6b9;
+      color: #fff;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    .seiten-btn.active,
+    .seiten-btn:hover {
+      background: #ff6f91;
+      color: #fff;
+    }
+    /* Donut Deko */
+    .donut-bg {
+      position: fixed;
+      right: -60px;
+      bottom: -60px;
+      width: 180px;
+      opacity: 0.18;
+      z-index: 0;
+      pointer-events: none;
+      filter: blur(1px);
+    }
+    .donut-bg2 {
+      position: fixed;
+      left: -70px;
+      top: -70px;
+      width: 140px;
+      opacity: 0.13;
+      z-index: 0;
+      pointer-events: none;
+      filter: blur(1px);
+      transform: rotate(-15deg);
+    }
+  </style>
+</head>
+<body>
+  <img src="https://pngimg.com/d/donut_PNG44.png" class="donut-bg" alt="Donut Deko">
+  <img src="https://pngimg.com/d/donut_PNG44.png" class="donut-bg2" alt="Donut Deko">
+  <div class="container">
+    <!-- Hier DEIN DonutWave-Bild einfügen -->
+    <img src="donutwave.png" alt="DonutWave Logo" class="donutwave-logo">
+    <span class="community-banner">✨ Willkommen in der DonutWave Community! ✨</span>
+    <h1>💬 Unsere Community</h1>
+    <p>Bei DonutWave sind wir mehr als nur Gamer – wir sind Freunde! Wir spielen zusammen, lachen, helfen uns und feiern unsere Erfolge.</p>
+    <ul class="eigenschaften-list">
+      <li>🎮 <b>Gemeinsam zocken:</b> Minecraft, Fortnite, Valorant, uvm.</li>
+      <li>🗣️ <b>Voice-Chats:</b> Täglich lustige Gespräche & Musik</li>
+      <li>🤝 <b>Zusammenhalt:</b> Neue Freunde finden, niemand bleibt allein</li>
+      <li>🎉 <b>Events & Giveaways:</b> Community-Events, Turniere & Preise</li>
+      <li>📢 <b>News & Support:</b> Immer die neuesten Infos & Hilfe</li>
+      <li>🍩 <b>Jeder willkommen:</b> Egal ob Anfänger oder Pro!</li>
+    </ul>
+    <div class="community-zitat">
+      <span>„Bei DonutWave habe ich echte Freunde gefunden und jeden Tag Spaß!“</span>
+      <div class="community-zitat-user">- @Ryooouu</div>
+    </div>
+    <div class="spiele-section">
+      <h2 style="color:#ff6f91; margin-bottom:10px;">Unsere Lieblingsspiele</h2>
+      <div class="spiele-icons">
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f3ae.png" alt="Fortnite" title="Fortnite" />
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f48e.png" alt="Minecraft" title="Minecraft" />
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f3b2.png" alt="Valorant" title="Valorant" />
+        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f3af.png" alt="Mehr Spiele" title="Mehr Spiele" />
+      </div>
+    </div>
+    <div class="community-galerie">
+      <h2 style="color:#fda085;">Unsere schönsten Momente</h2>
+      <img src="donutwave.png" alt="Dein DonutWave Bild" class="galerie-img">
+      <img src="https://pngimg.com/d/donut_PNG44.png" alt="Bunter Donut" class="galerie-img">
+      <img src="https://api.iconify.design/fluent-emoji:donut.svg" alt="Pixel Donut" class="galerie-img">
+      <img src="https://api.iconify.design/fluent-emoji:video-game.svg" alt="Gaming Controller" class="galerie-img">
+    </div>
+    <a href="https://discord.gg/CVYs6v88PS" class="discord-btn" target="_blank">Jetzt unserem Discord beitreten</a>
+  </div>
+  <div class="seiten-nav">
+    <a href="index.html" class="seiten-btn">Seite 1</a>
+    <a href="seite2.html" class="seiten-btn active">Seite 2</a>
+  </div>
+</body>
+</html>
