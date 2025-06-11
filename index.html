@@ -3,144 +3,462 @@
 <head>
   <meta charset="UTF-8" />
   <title>DonutWave | Startseite</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;700&display=swap');
     body {
-      background: linear-gradient(120deg, #f6d365 0%, #ffb6b9 60%, #ff6f91 100%);
-      min-height: 100vh;
-      font-family: 'Poppins', Arial, sans-serif;
       margin: 0;
       padding: 0;
+      min-height: 100vh;
+      font-family: 'Inter', Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+      overflow-x: hidden;
+      color: #f3f3f3;
     }
-    .container {
-      background: rgba(255,255,255,0.97);
-      border-radius: 32px;
-      box-shadow: 0 8px 32px rgba(255, 111, 145, 0.18);
-      max-width: 700px;
-      margin: 60px auto 40px auto;
-      padding: 40px 28px 28px 28px;
-      text-align: center;
+    .grid-main {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 48px;
+      max-width: 1200px;
+      margin: 60px auto 0 auto;
+      align-items: stretch;
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
-    .headline {
-      font-family: 'Pacifico', cursive;
-      font-size: 2.5rem;
-      color: #ff6f91;
-      margin-bottom: 10px;
+    .main-card {
+      background: rgba(30,34,44,0.96);
+      border-radius: 32px;
+      box-shadow: 0 8px 48px 0 #00c9ff44, 0 1.5px 12px #23294633;
+      padding: 54px 44px 38px 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      position: relative;
+      min-width: 320px;
+    }
+    .main-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 2.7rem;
+      font-weight: 900;
+      background: linear-gradient(90deg,#00c9ff 30%,#92fe9d 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
       letter-spacing: 2px;
-      text-shadow: 0 2px 16px #ffb6b9aa;
     }
-    .subline {
-      color: #7c3f00;
-      font-size: 1.15rem;
-      margin-bottom: 18px;
+    .main-owner {
+      font-weight: 900;
+      color: #ff4e50;
+      margin-bottom: 10px;
+      font-size: 1.13rem;
       letter-spacing: 1px;
+      text-shadow: 0 2px 8px #ff4e5044;
+      font-family: 'Montserrat', Arial, sans-serif;
     }
-    .owner {
-      font-weight: bold;
-      color: #e53935;
-      margin-bottom: 18px;
+    .main-desc {
+      color: #e0e7ef;
       font-size: 1.18rem;
+      margin-bottom: 18px;
       letter-spacing: 1px;
-      text-shadow: 0 2px 8px #ffb6b9aa;
-    }
-    .menu-section-title {
-      font-size: 1.2rem;
-      color: #ff6f91;
-      margin: 32px 0 10px 0;
-      font-weight: bold;
-      letter-spacing: 1px;
-      text-align: left;
+      font-family: 'Inter', Arial, sans-serif;
+      font-weight: 500;
     }
     .main-menu {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 22px;
-      justify-items: center;
-      margin: 36px 0 32px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 18px;
     }
     .menu-btn {
-      width: 220px;
-      padding: 18px 0;
-      border-radius: 18px;
-      background: linear-gradient(90deg, #ffb6b9 0%, #ff6f91 100%);
-      color: #fff;
-      font-size: 1.13rem;
-      font-weight: bold;
+      min-width: 140px;
+      padding: 13px 0;
+      border-radius: 16px;
+      background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+      color: #222;
+      font-size: 1.08rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
       border: none;
-      box-shadow: 0 4px 16px #ffb6b955;
+      box-shadow: 0 4px 18px #00c9ff33, 0 1.5px 8px #23294622;
       text-decoration: none;
-      transition: background 0.2s, transform 0.2s;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s, color 0.2s;
       letter-spacing: 1px;
       cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .menu-btn:hover {
+      background: linear-gradient(90deg, #92fe9d 0%, #00c9ff 100%);
+      color: #0f2027;
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 8px 32px #00c9ff55, 0 1.5px 12px #23294644;
+    }
+    .side-quote {
+      font-size: 1.13rem;
+      font-style: italic;
+      color: #92fe9d;
+      margin-bottom: 6px;
+      font-weight: 700;
+      text-shadow: 0 2px 8px #23294677;
+      border-left: 4px solid #00c9ff;
+      padding-left: 12px;
+    }
+    .side-user {
+      color: #00c9ff;
+      font-size: 1.01rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+      margin-left: 8px;
+    }
+    .side-report {
+      background: rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 10px 14px;
+      font-size: 0.99rem;
+      color: #e0e7ff;
+      margin-bottom: 6px;
+      border-left: 3px solid #ff4e50;
+      box-shadow: 0 2px 8px #ff4e5033;
+    }
+    .side-feature {
       display: flex;
       align-items: center;
       gap: 10px;
-      justify-content: center;
+      margin-bottom: 8px;
+      font-size: 1.07rem;
+      color: #e0e7ff;
     }
-    .menu-btn:hover {
-      background: linear-gradient(90deg, #ff6f91 0%, #ffb6b9 100%);
-      color: #fff;
-      transform: scale(1.06) rotate(-2deg);
-      box-shadow: 0 8px 32px #ff6f9177;
+    .side-feature i {
+      font-size: 1.2em;
+      filter: drop-shadow(0 0 4px #00c9ffcc);
     }
-    .seiten-nav {
-      margin: 40px auto 20px auto;
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-    }
-    .seiten-btn {
-      padding: 12px 36px;
-      border-radius: 30px;
-      background: #ffb6b9;
-      color: #fff;
-      font-size: 1.15rem;
-      font-weight: bold;
-      text-decoration: none;
-      border: none;
-      box-shadow: 0 4px 16px #ffb6b955;
-      transition: background 0.2s, transform 0.2s;
+    .side-badge {
+      display: inline-block;
+      background: linear-gradient(90deg,#00c9ff 0%,#92fe9d 100%);
+      color: #232946;
+      font-size: 0.98rem;
+      font-weight: 700;
+      border-radius: 12px;
+      padding: 3px 14px;
+      margin-left: 8px;
       letter-spacing: 1px;
-      cursor: pointer;
+      box-shadow: 0 2px 8px #00c9ff77;
     }
-    .seiten-btn.active, .seiten-btn:hover {
-      background: #ff6f91;
+    .side-note {
+      font-size: 0.98rem;
+      color: #ff4e50;
+      margin-top: 10px;
+      font-style: italic;
+      opacity: 0.85;
+    }
+    .shop-section {
+      background: rgba(255,255,255,0.10);
+      border-radius: 28px;
+      box-shadow: 0 4px 32px #00c9ff33, 0 1.5px 8px #23294622;
+      padding: 36px 28px 28px 28px;
+      min-width: 260px;
+      max-width: 400px;
       color: #fff;
-      transform: scale(1.07) rotate(-2deg);
-      box-shadow: 0 8px 32px #ff6f9177;
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 1.08rem;
+      position: relative;
+      z-index: 2;
+      margin-top: 18px;
+      backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: flex-start;
+      border: 1.5px solid #00c9ff;
+      animation: fadeInRight 1.2s cubic-bezier(.23,1.01,.32,1) 0.2s both;
     }
-    @media (max-width: 600px) {
-      .main-menu {
-        grid-template-columns: 1fr;
-      }
-      .container {
-        padding: 18px 4vw 18px 4vw;
-      }
+    .shop-title {
+      font-size: 1.5rem;
+      font-weight: 900;
+      background: linear-gradient(90deg,#00c9ff 30%,#92fe9d 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .shop-desc {
+      font-size: 1.08rem;
+      color: #e0e7ef;
+      margin-bottom: 10px;
+    }
+    .shop-product {
+      background: rgba(255,255,255,0.13);
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin-bottom: 8px;
+      width: 100%;
+      box-shadow: 0 2px 8px #00c9ff33;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .shop-product-title {
+      font-weight: 700;
+      color: #00c9ff;
+      font-size: 1.08rem;
+      margin-bottom: 2px;
+    }
+    .shop-product-desc {
+      color: #e0e7ef;
+      font-size: 0.98rem;
+    }
+    .shop-product-price {
+      color: #92fe9d;
+      font-weight: 900;
+      font-size: 1.08rem;
+      margin-top: 2px;
+    }
+    .shop-buy-btn {
+      margin-top: 8px;
+      background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+      color: #232946;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 22px;
+      font-size: 1.01rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #00c9ff33;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .shop-buy-btn:hover {
+      background: linear-gradient(90deg, #92fe9d 0%, #00c9ff 100%);
+      color: #0f2027;
+      transform: scale(1.07);
+    }
+    .shop-note {
+      font-size: 0.97rem;
+      color: #ff4e50;
+      margin-top: 10px;
+      font-style: italic;
+      opacity: 0.85;
+    }
+    /* ANIMATION HERO */
+    .hero-anim {
+      margin: 38px 0 32px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 180px;
+      position: relative;
+      z-index: 3;
+    }
+    .donut-hero {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 60% 40%, #00c9ff 0%, #92fe9d 80%);
+      box-shadow: 0 0 60px 10px #00c9ff88, 0 0 0 12px #fff2 inset;
+      position: relative;
+      animation: donutSpin 3.5s cubic-bezier(.7,.2,.2,1.2) infinite alternate;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      filter: drop-shadow(0 0 32px #00c9ff88);
+    }
+    .donut-hero::before {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 60px;
+      background: #232946;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%,-50%);
+      z-index: 2;
+      box-shadow: 0 0 24px #00c9ff44 inset;
+    }
+    .donut-glow {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #00c9ff55 0%, transparent 80%);
+      z-index: 1;
+      filter: blur(8px);
+      animation: glowPulse 2.2s infinite alternate;
+      pointer-events: none;
+    }
+    .donut-sprinkles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0; top: 0;
+      z-index: 3;
+      pointer-events: none;
+    }
+    .donut-sprinkles span {
+      position: absolute;
+      width: 16px; height: 6px;
+      border-radius: 8px;
+      background: #fff;
+      opacity: 0.85;
+      transform: rotate(var(--angle));
+      left: 50%; top: 50%;
+      margin-left: -8px; margin-top: -3px;
+      box-shadow: 0 0 8px #fff8;
+      animation: sprinkleMove 2.5s infinite alternate;
+    }
+    .donut-sprinkles span:nth-child(1) { --angle: 15deg; background: #ff4e50;}
+    .donut-sprinkles span:nth-child(2) { --angle: 45deg; background: #f9d423;}
+    .donut-sprinkles span:nth-child(3) { --angle: 75deg; background: #00c9ff;}
+    .donut-sprinkles span:nth-child(4) { --angle: 105deg; background: #92fe9d;}
+    .donut-sprinkles span:nth-child(5) { --angle: 135deg; background: #fff;}
+    .donut-sprinkles span:nth-child(6) { --angle: 165deg; background: #ff4e50;}
+    .donut-sprinkles span:nth-child(7) { --angle: 195deg; background: #f9d423;}
+    .donut-sprinkles span:nth-child(8) { --angle: 225deg; background: #00c9ff;}
+    .donut-sprinkles span:nth-child(9) { --angle: 255deg; background: #92fe9d;}
+    .donut-sprinkles span:nth-child(10) { --angle: 285deg; background: #fff;}
+    .donut-sprinkles span:nth-child(11) { --angle: 315deg; background: #ff4e50;}
+    .donut-sprinkles span:nth-child(12) { --angle: 345deg; background: #f9d423;}
+    @keyframes donutSpin {
+      0% { transform: rotate(0deg) scale(1);}
+      100% { transform: rotate(360deg) scale(1.07);}
+    }
+    @keyframes glowPulse {
+      0% { opacity: 0.7; }
+      100% { opacity: 1; }
+    }
+    @keyframes sprinkleMove {
+      0% { filter: brightness(1) blur(0px);}
+      100% { filter: brightness(1.3) blur(1.5px);}
+    }
+    @media (max-width: 1100px) {
+      .grid-main { grid-template-columns: 1fr; gap: 0;}
+      .shop-section { margin-top: 32px; }
+    }
+    @media (max-width: 700px) {
+      .main-card { max-width: 98vw; }
+      .main-menu { flex-direction: column; gap: 12px;}
+      .shop-section { max-width: 98vw; min-width: 0; }
+      .hero-anim { min-height: 120px; }
+    }
+    @media (max-width: 500px) {
+      .main-card { padding: 8vw 2vw 8vw 2vw; }
+      .main-title { font-size: 1.5rem; }
+      .menu-btn { font-size: 1rem; }
+      .shop-section { padding: 18px 8vw 18px 8vw; }
+    }
+    /* Animated background shapes */
+    .bg-shape {
+      position: fixed;
+      z-index: 0;
+      opacity: 0.10;
+      pointer-events: none;
+      filter: blur(2px);
+      animation: float 12s ease-in-out infinite alternate;
+    }
+    .bg-shape1 {
+      width: 340px; height: 340px;
+      background: radial-gradient(circle at 60% 40%, #00c9ff 0%, #92fe9d 80%);
+      left: 5vw; top: 10vh;
+      border-radius: 50% 40% 60% 50%/60% 50% 40% 50%;
+      animation-delay: 0s;
+    }
+    .bg-shape2 {
+      width: 220px; height: 220px;
+      background: radial-gradient(circle at 40% 60%, #ff4e50 0%, #f9d423 80%);
+      right: 8vw; top: 60vh;
+      border-radius: 60% 50% 40% 50%/50% 60% 50% 40%;
+      animation-delay: 3s;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) scale(1);}
+      100% { transform: translateY(-40px) scale(1.08);}
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="headline">Willkommen bei DonutWave!</h1>
-    <div class="subline">Deine Community für Spaß, Gaming und mehr 🍩</div>
-    <div class="owner">Owner: @Ryooouu</div>
-    <div class="menu-section-title">Menü</div>
-    <div class="main-menu">
-      <a href="Besonderheiten.html" class="menu-btn">🍩 Besonderheiten</a>
-      <a href="bewerbungsantrag.html" class="menu-btn">📝 Bewerbung</a>
-      <a href="patnerschaftantrag.html" class="menu-btn">🤝 Partnerschaft</a>
-      <a href="entbannungsantrag.html" class="menu-btn">🚫 Entbannungsantrag</a>
-      <a href="seite2.html" class="menu-btn">➡️ Seite 2</a>
-      <a href="index2.html" class="menu-btn">🛒 DWBuy</a>
+  <div class="bg-shape bg-shape1"></div>
+  <div class="bg-shape bg-shape2"></div>
+  <div class="grid-main">
+    <div class="main-card">
+      <div class="main-title">Willkommen bei DonutWave!</div>
+      <div class="main-owner">Owner: @Ryooouu</div>
+      <div class="main-desc">
+        Deine Community für Spaß, Gaming, Support und echte Freundschaft.<br>
+        <span style="color:#00c9ff;font-weight:700;">Werde Teil von etwas Besonderem!</span>
+      </div>
+      <!-- HERO ANIMATION START -->
+      <div class="hero-anim">
+        <div class="donut-glow"></div>
+        <div class="donut-hero">
+          <div class="donut-sprinkles">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+        <div style="margin-top:22px; font-size:1.25rem; font-weight:700; color:#ff4e50; text-shadow:0 2px 12px #ff4e5088;">
+          🍩 DonutWave – Mehr als nur ein Server! 🍩
+        </div>
+      </div>
+      <!-- HERO ANIMATION END -->
+      <div class="main-menu">
+        <a href="Besonderheiten.html" class="menu-btn">✨ Besonderheiten</a>
+        <a href="bewerbungsantrag.html" class="menu-btn">📝 Bewerbung</a>
+        <a href="patnerschaftantrag.html" class="menu-btn">🤝 Partnerschaft</a>
+        <a href="entbannungsantrag.html" class="menu-btn">🚫 Entbannungsantrag</a>
+        <a href="seite2.html" class="menu-btn">➡️ Seite 2</a>
+        <a href="index2.html" class="menu-btn">🛒 DWBuy</a>
+      </div>
+      <div class="side-quote">„DonutWave ist wie ein zweites Zuhause – hier wird jeder akzeptiert!“</div>
+      <div class="side-user">– @Dario</div>
+      <div class="side-report">
+        <b>Bericht:</b> <br>
+        <span style="color:#00c9ff;">Letzte Woche:</span> 3 neue Giveaways, 2 Community-Events, 14 neue Mitglieder!
+      </div>
+      <div class="side-feature"><i>🎮</i> Tägliche Gaming-Events <span class="side-badge">LIVE</span></div>
+      <div class="side-feature"><i>💬</i> Aktiver Discord-Support</div>
+      <div class="side-feature"><i>🏆</i> Giveaways & exklusive Ränge</div>
+      <div class="side-feature"><i>🌟</i> Premium-Feeling für alle</div>
+      <div class="side-note">Tipp: Hol dir den <b>V.I.P</b>-Rang für noch mehr Vorteile!</div>
     </div>
-  </div>
-  <div class="seiten-nav">
-    <a href="index.html" class="seiten-btn active">Startseite</a>
-    <a href="seite2.html" class="seiten-btn">Seite 2</a>
-    <a href="index2.html" class="seiten-btn">DWBuy</a>
+    <div class="shop-section">
+      <div class="shop-title">🛒 DWBuy – Unser Shop</div>
+      <div class="shop-desc">Hier kannst du exklusive Ränge & Vorteile für Discord kaufen!</div>
+      <div class="shop-product">
+        <div class="shop-product-title">V.I.P Rang</div>
+        <div class="shop-product-desc">Mehr Rechte, exklusive Channel & Premium-Support auf Discord.</div>
+        <div class="shop-product-price">3,99 €</div>
+        <a href="index2.html" class="shop-buy-btn">Jetzt kaufen</a>
+      </div>
+      <div class="shop-product">
+        <div class="shop-product-title">Krypton 1.21.1 VIP</div>
+        <div class="shop-product-desc">VIP für Minecraft Krypton 1.21.1 – Insider-Infos & Giveaways!</div>
+        <div class="shop-product-price">7,99 €</div>
+        <a href="index2.html" class="shop-buy-btn">Jetzt kaufen</a>
+      </div>
+      <div class="shop-note">Sicher & geprüft – Verschlüsselte Zahlung und echte Discord-Ränge!</div>
+    </div>
   </div>
 </body>
 </html>
-<link rel="stylesheet" href="style.css" />
+<div style="width:80px; height:80px; border-radius:50%; background:radial-gradient(circle at 60% 40%, #ff4e50 0%, #ffb199 90%); box-shadow:0 0 32px #ff4e50cc, 0 0 0 8px #fff2 inset; display:flex; align-items:center; justify-content:center; margin:32px auto 0 auto; position:relative; animation:redDonutSpin 2.5s infinite alternate;">
+  <div style="width:34px; height:34px; background:#232946; border-radius:50%; box-shadow:0 0 12px #ff4e5044 inset; position:absolute; left:50%; top:50%; transform:translate(-50%,-50%);"></div>
+  <div style="position:absolute; width:100%; height:100%; left:0; top:0; pointer-events:none;">
+    <span style="position:absolute; width:14px; height:5px; border-radius:8px; background:#fff; opacity:0.85; left:50%; top:50%; margin-left:-7px; margin-top:-2.5px; transform:rotate(25deg); box-shadow:0 0 8px #fff8;"></span>
+    <span style="position:absolute; width:14px; height:5px; border-radius:8px; background:#f9d423; opacity:0.85; left:50%; top:50%; margin-left:-7px; margin-top:-2.5px; transform:rotate(75deg); box-shadow:0 0 8px #fff8;"></span>
+    <span style="position:absolute; width:14px; height:5px; border-radius:8px; background:#fff; opacity:0.85; left:50%; top:50%; margin-left:-7px; margin-top:-2.5px; transform:rotate(135deg); box-shadow:0 0 8px #fff8;"></span>
+    <span style="position:absolute; width:14px; height:5px; border-radius:8px; background:#ffb199; opacity:0.85; left:50%; top:50%; margin-left:-7px; margin-top:-2.5px; transform:rotate(195deg); box-shadow:0 0 8px #fff8;"></span>
+    <span style="position:absolute; width:14px; height:5px; border-radius:8px; background:#ff4e50; opacity:0.85; left:50%; top:50%; margin-left:-7px; margin-top:-2.5px; transform:rotate(255deg); box-shadow:0 0 8px #fff8;"></span>
+  </div>
+</div>
+<style>
+@keyframes redDonutSpin {
+  0% { transform: rotate(0deg) scale(1);}
+  100% { transform: rotate(360deg) scale(1.09);}
+}
+</style>

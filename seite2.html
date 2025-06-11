@@ -2,221 +2,441 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DonutWave Community</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <title>DonutWave | Seite 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    @import url('donutwave.jpg');
     body {
-      background: radial-gradient(circle at 70% 30%, #ffe7a3 0%, #ffb6b9 60%, #ff6f91 100%);
+      margin: 0;
+      padding: 0;
       min-height: 100vh;
-      font-family: 'Poppins', Arial, sans-serif;
+      font-family: 'Inter', Arial, sans-serif;
+      background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
       overflow-x: hidden;
+      color: #f3f3f3;
     }
-    .container {
-      background: rgba(255,255,255,0.97);
-      border-radius: 32px;
-      box-shadow: 0 8px 32px rgba(255, 111, 145, 0.18);
-      max-width: 650px;
-      margin: 80px auto 40px auto;
-      padding: 48px 36px 36px 36px;
-      text-align: center;
+    .grid-main {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      gap: 36px;
+      max-width: 1500px;
+      margin: 60px auto 0 auto;
+      align-items: stretch;
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
-    .donutwave-logo {
-      width: 240px;
-      margin-bottom: 18px;
-      filter: drop-shadow(0 4px 16px #ffb6b9aa);
-      border-radius: 24px;
-      background: #fff;
-      padding: 8px;
-      animation: float 2.5s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%, 100% { transform: translateY(0);}
-      50% { transform: translateY(-14px);}
-    }
-    .community-banner {
-      background: linear-gradient(90deg, #ffb6b9 0%, #f6d365 100%);
-      color: #fff;
-      font-size: 1.18rem;
-      font-weight: bold;
-      border-radius: 18px;
-      padding: 13px 22px;
-      margin-bottom: 30px;
-      box-shadow: 0 2px 12px #ffb6b955;
-      letter-spacing: 1px;
-      display: inline-block;
-      animation: popin 1s;
-    }
-    @keyframes popin {
-      0% { transform: scale(0.7); opacity: 0;}
-      100% { transform: scale(1); opacity: 1;}
-    }
-    .eigenschaften-list {
-      text-align: left;
-      color: #7c3f00;
-      font-size: 1.13rem;
-      margin: 0 auto 24px auto;
-      max-width: 420px;
-      padding-left: 0;
-      list-style: none;
-    }
-    .eigenschaften-list li {
-      margin-bottom: 14px;
-      background: #fff7e6;
-      border-radius: 12px;
-      padding: 10px 16px;
-      box-shadow: 0 2px 8px #fda08522;
+    .main-card {
+      background: rgba(30,34,44,0.96);
+      border-radius: 32px;
+      box-shadow: 0 8px 48px 0 #00c9ff44, 0 1.5px 12px #23294633;
+      padding: 54px 44px 38px 44px;
       display: flex;
-      align-items: center;
-      gap: 10px;
+      flex-direction: column;
+      gap: 22px;
+      position: relative;
+      min-width: 320px;
+      max-width: 540px;
+    }
+    .main-title {
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 2.7rem;
+      font-weight: 900;
+      background: linear-gradient(90deg,#00c9ff 30%,#92fe9d 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+    .main-owner {
+      font-weight: 900;
+      color: #ff4e50;
+      margin-bottom: 10px;
+      font-size: 1.13rem;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #ff4e5044;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    .main-img {
+      width: 100%;
+      max-width: 340px;
+      border-radius: 18px;
+      margin: 0 auto 18px auto;
+      box-shadow: 0 4px 24px #00c9ff33;
+      display: block;
+    }
+    .main-menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .menu-btn {
+      min-width: 140px;
+      padding: 13px 0;
+      border-radius: 16px;
+      background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+      color: #222;
+      font-size: 1.08rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 700;
+      border: none;
+      box-shadow: 0 4px 18px #00c9ff33, 0 1.5px 8px #23294622;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s, color 0.2s;
+      letter-spacing: 1px;
+      cursor: pointer;
+      display: inline-block;
+      text-align: center;
+      margin-bottom: 4px;
+    }
+    .menu-btn:hover {
+      background: linear-gradient(90deg, #92fe9d 0%, #00c9ff 100%);
+      color: #0f2027;
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 8px 32px #00c9ff55, 0 1.5px 12px #23294644;
+    }
+    .team-section, .about-section, .bewerbung-section, .werte-section {
+      background: rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 18px 22px 14px 22px;
+      margin-bottom: 18px;
+      box-shadow: 0 2px 12px #00c9ff33;
+    }
+    .team-title {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #00c9ff;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .team-list {
+      margin: 0 0 8px 0;
+      padding: 0;
+      list-style: none;
       font-size: 1.08rem;
     }
-    .community-zitat {
-      background: #fff7e6;
-      border-left: 6px solid #ffb6b9;
-      border-radius: 14px;
-      margin: 28px auto 18px auto;
-      padding: 18px 22px 10px 22px;
-      max-width: 400px;
-      font-style: italic;
-      color: #7c3f00;
-      box-shadow: 0 2px 8px #fda08522;
+    .team-list li {
+      margin-bottom: 4px;
+      font-weight: 600;
+      letter-spacing: 1px;
     }
-    .community-zitat-user {
-      font-style: normal;
+    .team-owner { color: #00c9ff; }
+    .team-admin { color: #92fe9d; }
+    .team-admin2 { color: #f9d423; }
+    .about-section strong,
+    .werte-section strong {
+      color: #00c9ff;
+    }
+    .werte-section ul {
+      margin: 8px 0 0 18px;
+      padding: 0;
+    }
+    .werte-section li {
+      margin-bottom: 4px;
+    }
+    .bewerbung-section a {
+      color: #00c9ff;
       font-weight: bold;
-      margin-top: 8px;
-      color: #ff6f91;
-      text-align: right;
+      text-decoration: underline;
     }
-    .spiele-section {
-      margin: 32px 0 18px 0;
-    }
-    .spiele-icons img {
-      width: 44px;
-      margin: 0 10px;
-      vertical-align: middle;
-      transition: transform 0.2s;
-    }
-    .spiele-icons img:hover {
-      transform: scale(1.2) rotate(-8deg);
-    }
-    .community-galerie {
-      margin: 32px 0 18px 0;
-    }
-    .galerie-img {
-      width: 46%;
+    .longtext-section {
+      background: rgba(255,255,255,0.06);
       border-radius: 14px;
-      margin: 6px 2%;
-      box-shadow: 0 2px 8px #fda08522;
-      transition: transform 0.2s;
-      background: #fff;
-      padding: 6px;
+      padding: 18px 22px 14px 22px;
+      margin-bottom: 18px;
+      font-size: 1.07rem;
+      color: #e0e7ef;
+      box-shadow: 0 2px 8px #00c9ff22;
+      line-height: 1.7;
     }
-    .galerie-img:hover {
-      transform: scale(1.05);
-    }
-    .discord-btn {
+    .side-panel {
+      background: rgba(34, 40, 49, 0.92);
+      border-radius: 28px;
+      box-shadow: 0 4px 32px #00c9ff33, 0 1.5px 8px #23294622;
+      padding: 32px 24px 24px 24px;
+      color: #fff;
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 1.08rem;
+      position: relative;
+      z-index: 2;
       margin-top: 18px;
-      font-size: 1.13rem;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 #ffb6b955; }
-      70% { box-shadow: 0 0 0 12px #ffb6b900; }
-      100% { box-shadow: 0 0 0 0 #ffb6b955; }
-    }
-    .seiten-nav {
-      margin: 40px auto 20px auto;
+      backdrop-filter: blur(8px);
       display: flex;
-      justify-content: center;
-      gap: 16px;
+      flex-direction: column;
+      gap: 22px;
+      align-items: flex-start;
+      min-width: 260px;
+      max-width: 340px;
+      height: fit-content;
     }
-    .seiten-btn {
-      padding: 10px 28px;
-      border-radius: 22px;
-      background: #ffb6b9;
+    .side-panel-title {
+      font-size: 1.18rem;
+      font-weight: 800;
+      color: #92fe9d;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .side-panel-text {
+      font-size: 1.04rem;
+      color: #e0e7ef;
+      margin-bottom: 6px;
+    }
+    .side-panel-quote {
+      font-size: 1.09rem;
+      font-style: italic;
+      color: #f9d423;
+      margin-bottom: 6px;
+      font-weight: 700;
+      border-left: 4px solid #00c9ff;
+      padding-left: 12px;
+    }
+    .side-panel-list {
+      margin: 0 0 0 16px;
+      padding: 0;
+      font-size: 0.99rem;
+    }
+    .shop-section {
+      background: rgba(255,255,255,0.10);
+      border-radius: 28px;
+      box-shadow: 0 4px 32px #00c9ff33, 0 1.5px 8px #23294622;
+      padding: 36px 28px 28px 28px;
+      min-width: 260px;
+      max-width: 400px;
       color: #fff;
-      font-weight: bold;
+      font-family: 'Inter', Arial, sans-serif;
+      font-size: 1.08rem;
+      position: relative;
+      z-index: 2;
+      margin-top: 18px;
+      backdrop-filter: blur(8px);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: flex-start;
+      border: 1.5px solid #00c9ff;
+      animation: fadeInRight 1.2s cubic-bezier(.23,1.01,.32,1) 0.2s both;
+    }
+    .shop-title {
+      font-size: 1.5rem;
+      font-weight: 900;
+      background: linear-gradient(90deg,#00c9ff 30%,#92fe9d 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .shop-desc {
+      font-size: 1.08rem;
+      color: #e0e7ef;
+      margin-bottom: 10px;
+    }
+    .shop-product {
+      background: rgba(255,255,255,0.13);
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin-bottom: 8px;
+      width: 100%;
+      box-shadow: 0 2px 8px #00c9ff33;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .shop-product-title {
+      font-weight: 700;
+      color: #00c9ff;
+      font-size: 1.08rem;
+      margin-bottom: 2px;
+    }
+    .shop-product-desc {
+      color: #e0e7ef;
+      font-size: 0.98rem;
+    }
+    .shop-product-price {
+      color: #92fe9d;
+      font-weight: 900;
+      font-size: 1.08rem;
+      margin-top: 2px;
+    }
+    .shop-buy-btn {
+      margin-top: 8px;
+      background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+      color: #232946;
+      font-weight: 700;
+      border: none;
+      border-radius: 10px;
+      padding: 8px 22px;
+      font-size: 1.01rem;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #00c9ff33;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
       text-decoration: none;
-      font-size: 1.1rem;
-      transition: background 0.2s, color 0.2s;
+      display: inline-block;
     }
-    .seiten-btn.active,
-    .seiten-btn:hover {
-      background: #ff6f91;
-      color: #fff;
+    .shop-buy-btn:hover {
+      background: linear-gradient(90deg, #92fe9d 0%, #00c9ff 100%);
+      color: #0f2027;
+      transform: scale(1.07);
     }
-    /* Donut Deko */
-    .donut-bg {
+    .shop-note {
+      font-size: 0.97rem;
+      color: #ff4e50;
+      margin-top: 10px;
+      font-style: italic;
+      opacity: 0.85;
+    }
+    @media (max-width: 1400px) {
+      .grid-main { grid-template-columns: 1fr 1fr; }
+      .side-panel { display: none; }
+    }
+    @media (max-width: 1100px) {
+      .grid-main { grid-template-columns: 1fr; gap: 0;}
+      .shop-section { margin-top: 32px; }
+      .side-panel { display: none; }
+    }
+    @media (max-width: 700px) {
+      .main-card { max-width: 98vw; }
+      .main-menu { flex-direction: column; gap: 12px;}
+      .shop-section { max-width: 98vw; min-width: 0; }
+    }
+    @media (max-width: 500px) {
+      .main-card { padding: 8vw 2vw 8vw 2vw; }
+      .main-title { font-size: 1.5rem; }
+      .menu-btn { font-size: 1rem; }
+      .shop-section { padding: 18px 8vw 18px 8vw; }
+    }
+    /* Animated background shapes */
+    .bg-shape {
       position: fixed;
-      right: -60px;
-      bottom: -60px;
-      width: 180px;
-      opacity: 0.18;
       z-index: 0;
+      opacity: 0.10;
       pointer-events: none;
-      filter: blur(1px);
+      filter: blur(2px);
+      animation: float 12s ease-in-out infinite alternate;
     }
-    .donut-bg2 {
-      position: fixed;
-      left: -70px;
-      top: -70px;
-      width: 140px;
-      opacity: 0.13;
-      z-index: 0;
-      pointer-events: none;
-      filter: blur(1px);
-      transform: rotate(-15deg);
+    .bg-shape1 {
+      width: 340px; height: 340px;
+      background: radial-gradient(circle at 60% 40%, #00c9ff 0%, #92fe9d 80%);
+      left: 5vw; top: 10vh;
+      border-radius: 50% 40% 60% 50%/60% 50% 40% 50%;
+      animation-delay: 0s;
+    }
+    .bg-shape2 {
+      width: 220px; height: 220px;
+      background: radial-gradient(circle at 40% 60%, #ff4e50 0%, #f9d423 80%);
+      right: 8vw; top: 60vh;
+      border-radius: 60% 50% 40% 50%/50% 60% 50% 40%;
+      animation-delay: 3s;
+    }
+    @keyframes float {
+      0% { transform: translateY(0) scale(1);}
+      100% { transform: translateY(-40px) scale(1.08);}
     }
   </style>
 </head>
 <body>
-  <img src="https://pngimg.com/d/donut_PNG44.png" class="donut-bg" alt="Donut Deko">
-  <img src="https://pngimg.com/d/donut_PNG44.png" class="donut-bg2" alt="Donut Deko">
-  <div class="container">
-    <!-- Hier DEIN DonutWave-Bild einfügen -->
-    <img src="DonutWave.jpg" alt="DonutWave Logo" class="donutwave-logo">
-    <span class="community-banner">✨ Willkommen in der DonutWave Community! ✨</span>
-    <h1>💬 Unsere Community</h1>
-    <p>Bei DonutWave sind wir mehr als nur Gamer – wir sind Freunde! Wir spielen zusammen, lachen, helfen uns und feiern unsere Erfolge.</p>
-    <ul class="eigenschaften-list">
-      <li>🎮 <b>Gemeinsam zocken:</b> Minecraft, Fortnite, Valorant, uvm.</li>
-      <li>🗣️ <b>Voice-Chats:</b> Täglich lustige Gespräche & Musik</li>
-      <li>🤝 <b>Zusammenhalt:</b> Neue Freunde finden, niemand bleibt allein</li>
-      <li>🎉 <b>Events & Giveaways:</b> Community-Events, Turniere & Preise</li>
-      <li>📢 <b>News & Support:</b> Immer die neuesten Infos & Hilfe</li>
-      <li>🍩 <b>Jeder willkommen:</b> Egal ob Anfänger oder Pro!</li>
-    </ul>
-    <div class="community-zitat">
-      <span>„Bei DonutWave habe ich echte Freunde gefunden und jeden Tag Spaß!“</span>
-      <div class="community-zitat-user">- @Ryooouu</div>
+  <div class="bg-shape bg-shape1"></div>
+  <div class="bg-shape bg-shape2"></div>
+  <div class="grid-main">
+    <div class="main-card">
+      <div class="main-title">Willkommen bei DonutWave!</div>
+      <div class="main-owner">Owner: @Ryooouu</div>
+      <img src="DonutWave.jpg" alt="Unser Team" class="main-img">
+      <div class="team-section">
+        <div class="team-title">Unser Team</div>
+        <ul class="team-list">
+          <li class="team-owner">👑 Owner: @Ryooouu</li>
+          <li class="team-admin">🛡️ Admin: @Dario</li>
+          <li class="team-admin2">🛡️ Admin: @Paradox ghg</li>
+        </ul>
+      </div>
+      <div class="about-section">
+        <strong>Wer sind wir?</strong><br>
+        Wir sind ein motiviertes, freundliches Team, das Wert auf <b>Zusammenhalt</b>, <b>Respekt</b> und <b>gute Zusammenarbeit</b> legt.<br>
+        Bei uns ist jeder willkommen – egal ob Neuling oder alter Hase! Wir feiern Vielfalt und freuen uns auf jeden neuen Member.<br>
+      </div>
+      <div class="werte-section">
+        <strong>Unsere Werte:</strong>
+        <ul>
+          <li>🤝 Ehrlichkeit & Vertrauen</li>
+          <li>🎉 Spaß & Motivation</li>
+          <li>🫂 Unterstützung für alle</li>
+          <li>🚀 Immer offen für Neues</li>
+        </ul>
+      </div>
+      <div class="longtext-section">
+        <strong>Was macht DonutWave besonders?</strong><br>
+        DonutWave ist mehr als nur ein Discord-Server – wir sind eine Community, die zusammenhält, lacht und gemeinsam wächst. 
+        Unser Ziel ist es, einen Ort zu schaffen, an dem sich jeder wohlfühlt, seine Meinung sagen kann und Unterstützung findet. 
+        Wir veranstalten regelmäßig Events, Giveaways und bieten euch die Möglichkeit, eigene Ideen einzubringen.<br><br>
+        <b>Du willst dich einbringen?</b> Bei uns kannst du nicht nur mitmachen, sondern auch mitgestalten! 
+        Wir suchen immer nach engagierten Leuten, die Lust haben, Verantwortung zu übernehmen – egal ob als Moderator, Event-Manager oder einfach als aktives Mitglied.<br><br>
+        <b>Was erwarten wir?</b> Wir legen Wert auf Zuverlässigkeit, Freundlichkeit und Teamgeist. 
+        Wer Lust auf ein cooles Team und neue Freunde hat, ist bei uns genau richtig!
+      </div>
+      <div class="bewerbung-section">
+        <strong>Du willst ins Team?</strong><br>
+        Wir freuen uns auf jede Bewerbung!<br>
+        <a href="bewerbungsantrag.html">Hier bewerben</a> – zeig uns, warum du zu uns passt!
+      </div>
+      <div class="main-desc">
+        Deine Community für Spaß, Gaming, Support und echte Freundschaft.<br>
+        <span style="color:#00c9ff;font-weight:700;">Werde Teil von etwas Besonderem!</span>
+      </div>
+      <div class="main-menu">
+  <a href="index.html" class="menu-btn">🏠 Startseite</a>
+  <a href="index2.html" class="menu-btn">🛒 DWBuy</a>
+  <a href="seite3.html" class="menu-btn">➡️ Seite 3</a>
+</div>
+      <div class="side-quote">„DonutWave ist wie ein zweites Zuhause – hier wird jeder akzeptiert!“</div>
+      <div class="side-user">– @Dario</div>
+      <div class="side-report">
+        <b>Bericht:</b> <br>
+        <span style="color:#00c9ff;">Letzte Woche:</span> 3 neue Giveaways, 2 Community-Events, 14 neue Mitglieder!
+      </div>
+      <div class="side-feature"><i>🎮</i> Tägliche Gaming-Events <span class="side-badge">LIVE</span></div>
+      <div class="side-feature"><i>💬</i> Aktiver Discord-Support</div>
+      <div class="side-feature"><i>🏆</i> Giveaways & exklusive Ränge</div>
+      <div class="side-feature"><i>🌟</i> Premium-Feeling für alle</div>
+      <div class="side-note">Tipp: Hol dir den <b>V.I.P</b>-Rang für noch mehr Vorteile!</div>
     </div>
-    <div class="spiele-section">
-      <h2 style="color:#ff6f91; margin-bottom:10px;">Unsere Lieblingsspiele</h2>
-      <div class="spiele-icons">
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f3ae.png" alt="Fortnite" title="Fortnite" />
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f48e.png" alt="Minecraft" title="Minecraft" />
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f3b2.png" alt="Valorant" title="Valorant" />
-        <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/72x72/1f3af.png" alt="Mehr Spiele" title="Mehr Spiele" />
+    <div class="side-panel">
+      <div class="side-panel-title">Warum DonutWave?</div>
+      <div class="side-panel-text">
+        Wir sind nicht einfach nur ein Server – wir sind eine Familie! Bei uns findest du echte Freundschaften, Unterstützung und jede Menge Spaß.
+      </div>
+      <div class="side-panel-title">Das erwartet dich:</div>
+      <ul class="side-panel-list">
+        <li>🔔 Regelmäßige Community-Events</li>
+        <li>🎁 Coole Giveaways</li>
+        <li>🗣️ Offene Gesprächsrunden</li>
+        <li>💡 Platz für deine Ideen</li>
+        <li>🎤 Musik, Gaming, Memes & mehr</li>
+      </ul>
+      <div class="side-panel-quote">„Gemeinsam sind wir stärker – und Donuts schmecken zusammen besser!“</div>
+      <div class="side-panel-title">Dein Einstieg</div>
+      <div class="side-panel-text">
+        Egal ob du einfach nur chillen willst oder aktiv mitgestalten möchtest – bei uns bist du richtig. Schreib uns, bewirb dich oder bring dich ein!
       </div>
     </div>
-    <div class="community-galerie">
-      <h2 style="color:#fda085;">Unsere schönsten Momente</h2>
-      <img src="donutwave.png" alt="Dein DonutWave Bild" class="galerie-img">
-      <img src="https://pngimg.com/d/donut_PNG44.png" alt="Bunter Donut" class="galerie-img">
-      <img src="https://api.iconify.design/fluent-emoji:donut.svg" alt="Pixel Donut" class="galerie-img">
-      <img src="https://api.iconify.design/fluent-emoji:video-game.svg" alt="Gaming Controller" class="galerie-img">
+    <div class="shop-section">
+      <div class="shop-title">🛒 DWBuy – Unser Shop</div>
+      <div class="shop-desc">Hier kannst du exklusive Ränge & Vorteile für Discord kaufen!</div>
+      <div class="shop-product">
+        <div class="shop-product-title">V.I.P Rang</div>
+        <div class="shop-product-desc">Mehr Rechte, exklusive Channel & Premium-Support auf Discord.</div>
+        <div class="shop-product-price">3,99 €</div>
+        <a href="index2.html" class="shop-buy-btn">Jetzt kaufen</a>
+      </div>
+      <div class="shop-product">
+        <div class="shop-product-title">Krypton 1.21.1 VIP</div>
+        <div class="shop-product-desc">VIP für Minecraft Krypton 1.21.1 – Insider-Infos & Giveaways!</div>
+        <div class="shop-product-price">7,99 €</div>
+        <a href="index2.html" class="shop-buy-btn">Jetzt kaufen</a>
+      </div>
+      <div class="shop-note">Sicher & geprüft – Verschlüsselte Zahlung und echte Discord-Ränge!</div>
     </div>
-    <a href="https://discord.gg/CVYs6v88PS" class="discord-btn" target="_blank">Jetzt unserem Discord beitreten</a>
   </div>
-  <div class="seiten-nav">
-  <a href="index.html" class="seiten-btn">Seite 1</a>
-  <a href="seite2.html" class="seiten-btn active">Seite 2</a>
-  <a href="seite3.html" class="seiten-btn">Seite 3</a>
-</div>
+</body>
+</html>

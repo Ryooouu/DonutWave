@@ -3,41 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <title>Entbannungsantrag | DonutWave</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body { background: #fff7e6; font-family: 'Poppins', Arial, sans-serif; }
-    .container { max-width: 500px; margin: 60px auto; background: #fff; border-radius: 18px; box-shadow: 0 4px 16px #ffb6b955; padding: 32px 24px; }
-    h1 { color: #ff6f91; margin-bottom: 18px; }
-    label { font-weight: bold; color: #7c3f00; }
-    input, textarea { width: 100%; margin-bottom: 18px; padding: 10px; border-radius: 8px; border: 1px solid #ffb6b9; }
-    .seiten-btn { background: #ffb6b9; color: #fff; border: none; padding: 12px 32px; border-radius: 30px; font-weight: bold; cursor: pointer; }
-    .seiten-btn:hover { background: #ff6f91; }
+    body {
+      background: linear-gradient(135deg, #0f2027 0%, #2c5364 100%);
+      font-family: 'Inter', Arial, sans-serif;
+      min-height: 100vh;
+      color: #f3f3f3;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 500px;
+      margin: 60px auto;
+      background: rgba(30,34,44,0.96);
+      border-radius: 24px;
+      box-shadow: 0 8px 32px #00c9ff44, 0 1.5px 12px #23294633;
+      padding: 38px 28px 28px 28px;
+    }
+    h1 {
+      color: #00c9ff;
+      margin-bottom: 22px;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-size: 2.1rem;
+      font-weight: 900;
+      background: linear-gradient(90deg,#00c9ff 30%,#92fe9d 70%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 1.5px;
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+      color: #92fe9d;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+      display: block;
+    }
+    input, textarea {
+      width: 100%;
+      margin-bottom: 18px;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1.5px solid #00c9ff;
+      background: rgba(255,255,255,0.08);
+      color: #f3f3f3;
+      font-size: 1.08rem;
+      font-family: 'Inter', Arial, sans-serif;
+      transition: border 0.2s, background 0.2s;
+    }
+    input:focus, textarea:focus {
+      border: 1.5px solid #92fe9d;
+      background: rgba(0,201,255,0.10);
+      outline: none;
+    }
+    .seiten-btn {
+      background: linear-gradient(90deg, #00c9ff 0%, #92fe9d 100%);
+      color: #232946;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1.08rem;
+      cursor: pointer;
+      box-shadow: 0 4px 16px #00c9ff55;
+      letter-spacing: 1px;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+      margin-top: 8px;
+      margin-bottom: 4px;
+      display: inline-block;
+    }
+    .seiten-btn:hover {
+      background: linear-gradient(90deg, #92fe9d 0%, #00c9ff 100%);
+      color: #0f2027;
+      transform: scale(1.07) rotate(-2deg);
+      box-shadow: 0 8px 32px #00c9ff77;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 18px 2vw 18px 2vw; }
+      h1 { font-size: 1.3rem; }
+      .seiten-btn { font-size: 1rem; padding: 11px 18px;}
+    }
   </style>
 </head>
 <body>
-
   <div class="container">
-    <h1>Bewerbungsformular</h1>
+    <h1>Entbannungsantrag</h1>
     <form action="https://formspree.io/f/xzzgewbw" method="POST">
       <label for="name">Name & Discord-Name:</label>
       <input type="text" id="name" name="Name und Discord-Name" required />
 
-      <label for="age">Alter:</label>
-      <input type="number" id="age" name="Alter" required />
+      <label for="grund">Warum wurdest du gebannt?</label>
+      <textarea id="grund" name="Banngrund" rows="2" required></textarea>
 
-      <label for="role">Rolle (Helper, Mod, Admin...):</label>
-      <input type="text" id="role" name="Rolle" required />
+      <label for="einsicht">Hast du Einsicht? Was hast du daraus gelernt?</label>
+      <textarea id="einsicht" name="Einsicht" rows="2" required></textarea>
 
-      <label for="motivation">Warum möchtest du ins Team?</label>
-      <textarea id="motivation" name="Motivation" rows="3" required></textarea>
+      <label for="message">Was möchtest du dem Team noch sagen?</label>
+      <textarea id="message" name="Nachricht" rows="2"></textarea>
 
-      <label for="special">Was macht dich besonders?</label>
-      <textarea id="special" name="Besonderheit" rows="2"></textarea>
-
-      <button type="submit" class="seiten-btn">Bewerbung absenden</button>
+      <button type="submit" class="seiten-btn">Entbannung beantragen</button>
     </form>
-    <div style="margin-top:18px;">
+    <div style="margin-top:18px; text-align:center;">
       <a href="seite3.html" class="seiten-btn">⬅️ Zurück</a>
     </div>
   </div>
 </body>
+</html>
